@@ -7,10 +7,12 @@ import { GreetService } from './greet/greet.service';
 import { UserService } from './greet/user.service';
 import { PrismaService } from './common/prisma.service';
 import { GreetController } from './greet/greet.controller';
+import { SupabaseService } from './supabase/suppabase.service';
+import { SupabaseController } from './supabase/supabase.controller';
 
 @Module({
   imports: [HelloModule],
-  controllers: [AppController, CatsController, GreetController],
-  providers: [AppService, GreetService, UserService, PrismaService],
+  controllers: [AppController, CatsController, GreetController, SupabaseController],
+  providers: [AppService, GreetService, UserService, PrismaService, SupabaseService],
 })
 export class AppModule {}
