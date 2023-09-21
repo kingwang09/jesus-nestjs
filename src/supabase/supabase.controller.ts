@@ -9,6 +9,6 @@ export class SupabaseController {
     @Get()
     findAll() {
         console.log("call getAll")
-        this.supabaseService.getAll();
+        return this.supabaseService.getAll();
     }
 }
