@@ -11,4 +11,10 @@ export class SupabaseController {
         console.log("call getAll")
         return this.supabaseService.getAll();
     }
+
+    @Get('/login')
+    login() {
+        console.log("call login")
+        this.supabaseService.login();
+    }
 }
