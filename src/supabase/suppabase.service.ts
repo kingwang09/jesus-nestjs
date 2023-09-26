@@ -31,17 +31,6 @@ export class SupabaseService {
         const supabaseUrl = process.env.SUPABASE_URL
         const supabaseKey = process.env.SUPABASE_KEY
         const supabase = createClient(supabaseUrl, supabaseKey)
-
-
-        const { data, error } = await supabase.auth.signInWithPassword({
-            email: 'hyungeun.jin@wadiz.kr',
-            password: 'qwer123$',
-        })
-
-        console.log("sign in: ", data);
-        if( error ){
-            console.error("sign in error: ", error);
-        }
         
     }
 }
