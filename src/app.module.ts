@@ -18,7 +18,3 @@ import { MulterModule } from '@nestjs/platform-express';
   providers: [AppService, GreetService, UserService, PrismaService, SupabaseService],
 })
 export class AppModule {}
-
-MulterModule.register({
-  dest: './upload',
-}); 
