@@ -6,12 +6,6 @@ import { MulterModule } from '@nestjs/platform-express';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  //upload file setting
-  MulterModule.register({
-    dest: './upload',
-  }); 
-
-
   //swagger setting
   const config = new DocumentBuilder()
     .setTitle('Cats example')

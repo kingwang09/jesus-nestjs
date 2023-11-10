@@ -9,12 +9,12 @@ import { PrismaService } from './common/prisma.service';
 import { GreetController } from './greet/greet.controller';
 import { SupabaseService } from './supabase/suppabase.service';
 import { SupabaseController } from './supabase/supabase.controller';
-import { UploadController } from './upload/upload.controller';
 import { MulterModule } from '@nestjs/platform-express';
+import { LocalStorageUploadModule } from './upload/upload.module';
 
 @Module({
-  imports: [HelloModule],
-  controllers: [AppController, CatsController, GreetController, SupabaseController, UploadController],
+  imports: [HelloModule, LocalStorageUploadModule],
+  controllers: [AppController, CatsController, GreetController, SupabaseController],
   providers: [AppService, GreetService, UserService, PrismaService, SupabaseService],
 })
 export class AppModule {}
