@@ -74,3 +74,4 @@ Nest is [MIT licensed](LICENSE).
 
 ## 작업 내용
 - JWT 인증 추가 (guard)
+- fastify 추가
