@@ -4,17 +4,19 @@ import { AppService } from './app.service';
 import { CatsController } from './cats/cats.controller';
 import { HelloModule } from './hello/hello.module';
 import { GreetService } from './greet/greet.service';
-import { UserService } from './common/user.service';
 import { PrismaService } from './common/prisma.service';
 import { GreetController } from './greet/greet.controller';
 import { SupabaseService } from './supabase/suppabase.service';
 import { SupabaseController } from './supabase/supabase.controller';
 import { MulterModule } from '@nestjs/platform-express';
 import { LocalStorageUploadModule } from './upload/upload.module';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
+import { UserService } from './common/user.service';
 
 @Module({
-  imports: [HelloModule, LocalStorageUploadModule],
+  imports: [HelloModule, LocalStorageUploadModule, AuthModule, UsersModule],
   controllers: [AppController, CatsController, GreetController, SupabaseController],
-  providers: [AppService, GreetService, UserService, PrismaService, SupabaseService],
+  providers: [AppService, GreetService, PrismaService, SupabaseService, UserService],
 })
 export class AppModule {}
