@@ -13,9 +13,10 @@ import { LocalStorageUploadModule } from './upload/upload.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { UserService } from './common/user.service';
+import { ShopModule } from './shop/shop.module';
 
 @Module({
-  imports: [HelloModule, LocalStorageUploadModule, AuthModule, UsersModule],
+  imports: [HelloModule, LocalStorageUploadModule, AuthModule, UsersModule, ShopModule],
   controllers: [AppController, CatsController, GreetController, SupabaseController],
   providers: [AppService, GreetService, PrismaService, SupabaseService, UserService],
 })
